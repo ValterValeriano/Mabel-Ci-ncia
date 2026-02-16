@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:#0f172a;color:#fff;line-height:1.6;}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+background:rgba(15,23,42,0.95);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.container{width:90%;max-width:1200px;margin:auto;}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;}
+.logo{font-size:22px;font-weight:700;color:#38bdf8;}
+
+.nav-links{display:flex;gap:20px;}
+.nav-links a{text-decoration:none;color:#fff;transition:0.3s;}
+.nav-links a:hover{color:#38bdf8;}
+
+.menu-toggle{display:none;font-size:24px;cursor:pointer;}
+
+section{padding:100px 0;}
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+background:linear-gradient(135deg,#1e3a8a,#6d28d9);
+}
+
+.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.hero h1{font-size:42px;margin-bottom:15px;}
+.hero p{margin-bottom:20px;}
+.btn{
+display:inline-block;
+padding:12px 22px;
+background:#38bdf8;
+color:#000;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,0.3);}
+
+.hero img{width:100%;border-radius:12px;}
+
+.sobre,.recursos,.cursos,.contato{background:#111827;}
+
+.title{text-align:center;margin-bottom:50px;}
+.title h2{font-size:32px;color:#38bdf8;}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1f2937;
+padding:20px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+.card i{font-size:30px;margin-bottom:10px;color:#38bdf8;}
+.card:hover{transform:translateY(-8px);}
+
+.recursos ul{list-style:none;text-align:center;}
+.recursos li{margin:10px 0;}
+
+.ia-box{
+margin-top:40px;
+background:#1f2937;
+padding:20px;
+border-radius:10px;
+}
+
+.ia-box textarea{
+width:100%;
+padding:10px;
+border-radius:8px;
+border:none;
+margin:10px 0;
+}
+
+footer{
+background:#0b1120;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+
+.reveal{opacity:0;transform:translateY(30px);transition:1s;}
+.reveal.active{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+.hero-content{grid-template-columns:1fr;}
+.nav-links{
+position:absolute;
+top:70px;
+right:0;
+background:#0f172a;
+flex-direction:column;
+width:200px;
+display:none;
+padding:20px;
+}
+.nav-links.show{display:flex;}
+.menu-toggle{display:block;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">Science Academy</div>
+<div class="menu-toggle"><i class="fas fa-bars"></i></div>
+<div class="nav-links">
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#cursos">Cursos</a>
+<a href="#recursos">Recursos</a>
+<a href="#contato">Contato</a>
+</div>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="inicio">
+<div class="container hero-content">
+<div>
+<h1>Aprenda Ciências de Forma Inteligente</h1>
+<p>Explore conhecimento, desenvolva habilidades e evolua com apoio da tecnologia.</p>
+<a href="#cursos" class="btn">Começar agora</a>
+</div>
+<img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d" alt="">
+</div>
+</section>
+
+<section class="sobre reveal" id="sobre">
+<div class="container">
+<div class="title"><h2>Sobre a Plataforma</h2></div>
+<p style="text-align:center;">
+Nossa missão é tornar o aprendizado científico acessível, claro e motivador, utilizando métodos modernos e recursos digitais.
+</p>
+</div>
+</section>
+
+<section class="cursos reveal" id="cursos">
+<div class="container">
+<div class="title"><h2>Áreas de Estudo</h2></div>
+<div class="cards">
+<div class="card">
+<i class="fas fa-atom"></i>
+<h3>Física</h3>
+<p>Compreenda as leis que regem o universo.</p>
+</div>
+<div class="card">
+<i class="fas fa-flask"></i>
+<h3>Química</h3>
+<p>Descubra as transformações da matéria.</p>
+</div>
+<div class="card">
+<i class="fas fa-dna"></i>
+<h3>Biologia</h3>
+<p>Entenda os mecanismos da vida.</p>
+</div>
+<div class="card">
+<i class="fas fa-square-root-alt"></i>
+<h3>Matemática</h3>
+<p>Desenvolva raciocínio lógico e precisão.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="recursos reveal" id="recursos">
+<div class="container">
+<div class="title"><h2>Recursos</h2></div>
+<ul>
+<li>🎥 Vídeo-aulas</li>
+<li>🧠 Exercícios práticos</li>
+<li>🧪 Laboratório virtual</li>
+<li>📚 Materiais de apoio</li>
+</ul>
+
+<div class="ia-box">
+<h3>Assistente de Estudos com IA</h3>
+<p>Pergunte qualquer dúvida sobre os conteúdos.</p>
+<textarea id="pergunta" rows="4" placeholder="Digite sua pergunta..."></textarea>
+<button class="btn" onclick="perguntarIA()">Perguntar</button>
+<p id="resposta" style="margin-top:15px;"></p>
+</div>
+
+</div>
+</section>
+
+<section class="contato reveal" id="contato">
+<div class="container">
+<div class="title"><h2>Contato</h2></div>
+<form>
+<input type="text" placeholder="Nome" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:none;">
+<input type="email" placeholder="Email" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:none;">
+<textarea placeholder="Mensagem" style="width:100%;padding:10px;margin:10px 0;border-radius:8px;border:none;"></textarea>
+<button class="btn">Enviar</button>
+</form>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Science Academy - Todos os direitos reservados</p>
+</footer>
+
+<script>
+const toggle=document.querySelector(".menu-toggle");
+const nav=document.querySelector(".nav-links");
+toggle.onclick=()=>nav.classList.toggle("show");
+
+function perguntarIA(){
+const pergunta=document.getElementById("pergunta").value;
+const resposta=document.getElementById("resposta");
+resposta.innerText="A processar...";
+
+// ENDPOINT da sua função no Netlify
+fetch("/.netlify/functions/ia",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({pergunta})
+})
+.then(r=>r.json())
+.then(d=>resposta.innerText=d.resposta)
+.catch(()=>resposta.innerText="Erro ao obter resposta.");
+}
+
+// animação
+const reveals=document.querySelectorAll(".reveal");
+window.addEventListener("scroll",()=>{
+reveals.forEach(r=>{
+const top=r.getBoundingClientRect().top;
+if(top<window.innerHeight-100){r.classList.add("active");}
+});
+});
+</script>
+
+</body>
+</html>
